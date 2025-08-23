@@ -36,7 +36,7 @@ export default function Hero() {
           <div className="mt-6 flex flex-wrap justify-center gap-3 hero-buttons">
             <a href="#pricing" className="btn-base btn-primary">{t('header.buttons.get_started')}</a>
             <a 
-              href="https://www.voicecake.io/auth/signin" 
+              href="https://www.app.voicecake.io/auth/signin" 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn-base btn-secondary"
