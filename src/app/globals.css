@@ -1,0 +1,649 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* VoiceCake.io Landing Page Styles */
+
+/* Font Definitions */
+.font-inter { 
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+}
+
+.font-display { 
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+}
+
+.font-noto-serif {
+  font-family: var(--font-noto-serif), Georgia, serif;
+}
+
+.font-roboto {
+  font-family: var(--font-roboto), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 100;
+}
+
+.font-cairo {
+  font-family: var(--font-cairo), 'Noto Sans Arabic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Default body font - Roboto for all text except headings */
+body {
+  font-family: var(--font-roboto), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+}
+
+/* Override Tailwind's font-black to use weight 700 */
+.font-black {
+  font-weight: 700 !important;
+}
+
+/* Make h2 and h3 elements use font-weight 700 */
+h2, h3 {
+  font-weight: 700 !important;
+}
+
+/* Make h4 elements and .font-bold class use font-weight 700 */
+h4, .font-bold {
+  font-weight: 700 !important;
+}
+
+/* Section headings */
+.section-heading {
+  font-family: var(--font-noto-serif), Georgia, serif;
+  font-weight: 700;
+  font-size: 1.375rem;
+}
+
+/* Text size and weight overrides */
+.text-sm {
+  font-size: 0.80rem !important;
+  font-weight: 300 !important;
+}
+
+.text-white\/90 {
+  font-weight: 300 !important;
+}
+
+/* Card title font weights */
+.text-base.font-bold {
+  font-weight: 700 !important;
+}
+
+/* Navigation tabs */
+.nav-tab {
+  border-bottom: 3px solid transparent;
+  padding: 1rem 0 0.8125rem 0;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.nav-tab.active {
+  border-bottom-color: #09ae9b;
+  color: #ffffff;
+}
+
+.nav-tab:not(.active) {
+  color: #90cbc4;
+}
+
+.nav-tab:hover {
+  color: #ffffff;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Pricing Tabs */
+.pricing-tab {
+  color: #90cbc4;
+  background: transparent;
+}
+
+.pricing-tab.active {
+  color: #ffffff;
+  background: #09ae9b;
+}
+
+.pricing-content {
+  display: none;
+}
+
+.pricing-content.active {
+  display: block;
+}
+
+/* Arabic language support - Simple and clean RTL layout */
+html[dir="rtl"] {
+  direction: rtl;
+  font-family: var(--font-cairo), 'Noto Sans Arabic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+/* Ensure LTR languages use Roboto font */
+html[dir="ltr"] {
+  font-family: var(--font-roboto), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
+
+/* Basic RTL text alignment for content */
+html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3, 
+html[dir="rtl"] h4, html[dir="rtl"] h5, html[dir="rtl"] h6,
+html[dir="rtl"] p, html[dir="rtl"] span, html[dir="rtl"] label {
+  text-align: right !important;
+}
+
+/* Keep main layout centered */
+html[dir="rtl"] main {
+  text-align: center !important;
+}
+
+html[dir="rtl"] .max-w-3xl,
+html[dir="rtl"] .text-center,
+html[dir="rtl"] .mx-auto {
+  text-align: center !important;
+}
+
+/* Card content RTL alignment */
+html[dir="rtl"] .card,
+html[dir="rtl"] .bg-\[\#183431\] {
+  text-align: right !important;
+}
+
+/* Button and form RTL adjustments */
+html[dir="rtl"] .btn-base {
+  text-align: center !important;
+}
+
+html[dir="rtl"] .form-input {
+  text-align: right !important;
+}
+
+/* Navigation RTL adjustments */
+html[dir="rtl"] nav {
+  direction: rtl;
+}
+
+html[dir="rtl"] .flex.gap-9 {
+  flex-direction: row-reverse;
+}
+
+/* Table RTL adjustments */
+html[dir="rtl"] table {
+  direction: rtl;
+}
+
+html[dir="rtl"] th,
+html[dir="rtl"] td {
+  text-align: right !important;
+}
+
+/* Hero Section */
+.hero-bg-animated {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(9, 174, 155, 0.3);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.particle:nth-child(1) {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+  top: 60%;
+  left: 80%;
+  animation-delay: 2s;
+}
+
+.particle:nth-child(3) {
+  top: 40%;
+  left: 60%;
+  animation-delay: 4s;
+}
+
+.particle:nth-child(4) {
+  top: 80%;
+  left: 20%;
+  animation-delay: 1s;
+}
+
+.particle:nth-child(5) {
+  top: 30%;
+  left: 90%;
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+    opacity: 0.8;
+  }
+}
+
+/* Hero Typography */
+.hero-heading {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 100;
+  line-height: 1.1;
+  background: linear-gradient(135deg, #ffffff 0%, #09ae9b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Header Navigation Styles */
+#header-nav a {
+  font-weight: 900 !important;
+}
+
+/* Aspect ratio utilities */
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+/* Image container styles */
+.h-48 {
+  height: 12rem !important;
+  min-height: 12rem !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Tab content visibility */
+.tab-content {
+  display: block !important;
+}
+
+.tab-content.hidden {
+  display: none !important;
+}
+
+
+
+/* Button Styles */
+.btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  min-height: 3rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #09ae9b 0%, #0d9488 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(9, 174, 155, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(9, 174, 155, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid #316862;
+}
+
+.btn-secondary:hover {
+  background: rgba(49, 104, 98, 0.2);
+  border-color: #09ae9b;
+  transform: translateY(-2px);
+}
+
+/* Card Styles */
+.card {
+  background: rgba(24, 52, 49, 0.8);
+  border: 1px solid #316862;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  border-color: #09ae9b;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(9, 174, 155, 0.2);
+}
+
+.icon-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(135deg, #09ae9b 0%, #0d9488 100%);
+  border-radius: 0.75rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+/* Tab Styles */
+.tab-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tab-btn:hover {
+  color: white;
+}
+
+.tab-btn.active {
+  color: white;
+  border-bottom-color: #09ae9b !important;
+}
+
+.tab-content {
+  display: block;
+}
+
+.tab-content.hidden {
+  display: none;
+}
+
+/* Tab button font weight */
+.tab-btn {
+  font-weight: 400 !important;
+}
+
+/* Table td font weight */
+td {
+  font-weight: 400 !important;
+}
+
+/* Logo text font weight */
+.font-roboto {
+  font-weight: 900 !important;
+}
+
+/* Pricing tab font weight */
+.pricing-tab {
+  font-weight: 400 !important;
+}
+
+/* Audio Player Styles */
+.audio-tile {
+  background: rgba(24, 52, 49, 0.8);
+  border: 1px solid #316862;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.audio-tile:hover {
+  border-color: #09ae9b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(9, 174, 155, 0.2);
+}
+
+.audio-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(135deg, #09ae9b 0%, #0d9488 100%);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.audio-btn:hover {
+  background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+  transform: scale(1.1);
+}
+
+.audio-btn.playing {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+}
+
+/* Table Styles */
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 0.75rem;
+  border: 1px solid #316862;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #183431;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: white;
+  border-bottom: 1px solid #316862;
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid #316862;
+  color: #90cbc4;
+}
+
+tr:nth-child(even) {
+  background: rgba(16, 35, 33, 0.5);
+}
+
+tr:nth-child(odd) {
+  background: transparent;
+}
+
+/* Form Styles */
+.form-input {
+  background: #183431;
+  border: 1px solid #316862;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #09ae9b;
+  box-shadow: 0 0 0 3px rgba(9, 174, 155, 0.1);
+}
+
+.form-input::placeholder {
+  color: #90cbc4;
+}
+
+/* Heading Font */
+.heading-font {
+  font-family: var(--font-noto-serif), Georgia, serif;
+  font-weight: 700;
+}
+
+/* Hero Heading Font - Noto Serif */
+.hero-heading {
+  font-family: var(--font-noto-serif), Georgia, serif !important;
+  font-weight: 400 !important;
+  font-size: 3.40rem !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.02em !important;
+  animation: fadeInUp 1s ease-out 0.3s both;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-content {
+  animation: fadeInUp 1s ease-out 0.6s both;
+  position: relative;
+  z-index: 10;
+  font-weight: 900 !important;
+}
+
+/* Hero benefits text - make bolder */
+.hero-buttons + div {
+  font-weight: 900 !important;
+}
+
+.hero-buttons + div span {
+  font-weight: 900 !important;
+}
+
+.hero-buttons {
+  animation: fadeInUp 1s ease-out 0.9s both;
+  position: relative;
+  z-index: 10;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 2rem;
+  }
+  
+  .hero-content {
+    font-size: 1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-base {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+  
+  .table-wrap {
+    font-size: 0.875rem;
+  }
+  
+  th, td {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Utility Classes */
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #09ae9b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient {
+  background: linear-gradient(135deg, #09ae9b 0%, #0d9488 100%);
+}
+
+.border-gradient {
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, #09ae9b 0%, #0d9488 100%) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
