@@ -47,7 +47,7 @@ export default function Header() {
           </div>
           <div className="flex gap-2">
             <a 
-              href="https://www.app.voicecake.io/auth/signin" 
+              href="https://app.voicecake.io/auth/signin" 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn-base btn-secondary"

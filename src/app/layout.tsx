@@ -97,7 +97,7 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="/images/voice-cake-logo-gradient.png" type="image/png" sizes="32x32" />
         <link rel="apple-touch-icon" href="/images/voice-cake-logo-gradient.png" />
         <meta name="theme-color" content="#09ae9b" />

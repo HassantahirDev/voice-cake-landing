@@ -49,7 +49,7 @@ export default function Pricing() {
               </p>
             </div>
             <a 
-              href="https://www.app.voicecake.io/auth/signin" 
+              href="https://app.voicecake.io/auth/signin" 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn-base btn-primary inline-flex"
@@ -68,7 +68,7 @@ export default function Pricing() {
               </p>
             </div>
             <a 
-              href="https://www.app.voicecake.io/auth/signin" 
+              href="https://app.voicecake.io/auth/signin" 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn-base btn-primary inline-flex"
@@ -87,7 +87,7 @@ export default function Pricing() {
               </p>
             </div>
             <a 
-              href="https://www.app.voicecake.io/auth/signin" 
+              href="https://app.voicecake.io/auth/signin" 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn-base btn-primary inline-flex"
@@ -111,7 +111,7 @@ export default function Pricing() {
               </p>
             </div>
             <a 
-              href="https://www.app.voicecake.io/auth/signin" 
+              href="https://app.voicecake.io/auth/signin" 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn-base btn-primary inline-flex"
@@ -130,7 +130,7 @@ export default function Pricing() {
               </p>
             </div>
             <a 
-              href="https://www.app.voicecake.io/auth/signin" 
+              href="https://app.voicecake.io/auth/signin" 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn-base btn-primary inline-flex"
@@ -149,7 +149,7 @@ export default function Pricing() {
               </p>
             </div>
             <a 
-              href="https://www.app.voicecake.io/auth/signin" 
+              href="https://app.voicecake.io/auth/signin" 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn-base btn-primary inline-flex"
